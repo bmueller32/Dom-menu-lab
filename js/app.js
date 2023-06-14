@@ -139,7 +139,7 @@ return;
 
 //5.4 for each/remove()
 //At this point, a new menu item has been clicked and it's time to "reset" any currently active menu item...
-
+console.log(link)
 //Add code to the bottom of the the event listener that iterates over each <a> element in topMenuLinks and removes the class name of active, regardless of whether the <a> element has a class of active or not.
 topMenuLinks.forEach(function(link) {
 
@@ -160,9 +160,9 @@ const linkData = menuLinks.find(function(linkObj) {
   return linkObj.text === link.textContent;
 });
 
-
+console.log(linkData)
 //Hint: Saving the "link" object in a variable will come in handy for passing its subLinks array in Task 5.7
-
+showingSubMenu = 'subLinks' in linkData
 
 //5.7 if else
 //If showingSubMenu is true:
@@ -189,6 +189,7 @@ mainEl.innerHTML = '<h1>about</h1>';
 
 //Clears the contents of subMenuEl.
 function buildSubMenu(subLinks) {
+console.log(subLinks)
 ///for each
 //Iterates over the subLinks array passed as an argument; and for each "link" object:
 subMenuEl.innerHTML = '';
